@@ -1,12 +1,14 @@
-/* Endurance.css */
+
 
 main {
     display: flex;
+    flex-direction: column;
     margin-top: 35px;
 }
 
 .mainer {
     flex: 4;
+    padding: 20px;
 }
 
 .mainer h1 {
@@ -16,15 +18,16 @@ main {
 aside {
     flex: 1;
     background-color: red;
-    margin-left: 45px;
+    margin-left: 0;
+    padding: 20px;
 }
 
 .endurance {
     display: flex;
-    margin: 45px;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 .endurance .crea {
@@ -32,7 +35,7 @@ aside {
     border-radius: 15px;
     transition: 0.5s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 15px;
+    margin: 10px;
 }
 
 .endurance .crea:hover {
@@ -61,10 +64,13 @@ aside {
     background-color: green;
     text-align: center;
     cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 5px;
 }
 
 .sidebar {
-    width: 250px;
+    width: 100%;
     background-color: #f9f9f9;
     padding: 15px;
     border: 1px solid #ddd;
@@ -111,52 +117,120 @@ aside {
     color: #333;
 }
 
-/* Responsive adjustments for endurance.css */
-@media (max-width: 768px) {
-    .endurance {
-        flex-direction: column;
-        margin: 20px;
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.footerMenu {
+    text-align: center;
+}
+
+.fMenuTitle {
+    font-size: 16px;
+}
+
+.fList {
+    padding: 0;
+    list-style: none;
+}
+
+.fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.footerRight {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.fInput {
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.fButton {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.fIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.fIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.copyright {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 160px;
     }
 
-    .endurance .crea img {
-        height: 150px;
-        width: 150px;
+    .search {
+        left: 129px;
+    }
+
+    .nav-search ul a {
+        font-size: 24px;
+    }
+
+    .wake a {
+        font-size: 20px;
+    }
+
+    main {
+        flex-direction: row;
     }
 
     aside {
-        margin-left: 0;
-        margin-top: 20px;
+        margin-left: 45px;
     }
 
-    .sidebar {
-        width: 100%;
+    footer {
+        flex-direction: row;
+    }
+
+    .footerLeft {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
+    .searchInput {
+        width: 250px;
+    }
+
     .endurance {
-        margin: 10px;
-    }
-
-    .endurance .crea {
-        margin: 10px;
-    }
-
-    .endurance .crea img {
-        height: 120px;
-        width: 120px;
-    }
-
-    .sidebar h2 {
-        font-size: 16px;
-    }
-
-    .sidebar ul li a {
-        font-size: 12px;
-    }
-
-    .sidebar ul ul li a {
-        font-size: 10px;
+        margin: 45px;
     }
 }
-
